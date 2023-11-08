@@ -106,6 +106,7 @@ if [ -n "$dir" ]; then
             log "Creating directory: $dirPath"
             mkdir -p "$dirPath"
             chown -R "$uid:users" "$dirPath"
+            chmod -R 755 "$dirPath"
         else
             log "Directory already exists: $dirPath"
         fi

@@ -9,14 +9,16 @@ HostKey /etc/ssh/ssh_host_rsa_key
 UseDNS no
 
 # Limited access
-PermitRootLogin no
+PermitRootLogin yes
 X11Forwarding no
-AllowTcpForwarding no
+AllowTcpForwarding yes
 
 # Force sftp and chroot jail
 Subsystem sftp internal-sftp
-ForceCommand internal-sftp
-ChrootDirectory %h
+#ForceCommand internal-sftp
+#ChrootDirectory %h
 
 # Enable this for more logs
 #LogLevel VERBOSE
+
+StrictModes no
